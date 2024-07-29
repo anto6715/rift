@@ -1,0 +1,22 @@
+# IDE dirs
+.vscode
+.idea
+
+# extensions
+*.nc
+*.json
+*.pyc
+*.out
+*.txt
+*.log
+
+# pip directory
+dist
+*.egg-info
+pip-wheel-metadata
+build
+PKG-INFO
+medseatest.egg-info
+
+# others
+poetry.lock
