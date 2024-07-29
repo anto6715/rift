@@ -1,9 +1,14 @@
 [tool.poetry]
-name = "rift"
-version = "0.1.0"
+name = "rift-testing"
+version = "0.1.1"
 description = "Parametrized Integration Testing framework Tool"
 authors = ["Antonio Mariani <antonio.mariani@cmcc.it>"]
 readme = "README.md"
+packages = [
+    { include = "rift" },
+    { include = "rift/**/*.py" },
+]
+keywords = ["test", "intragration testing", "CI/CD", "devops", "test suite"]
 
 [tool.poetry.dependencies]
 python = "^3.10"

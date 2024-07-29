@@ -17,7 +17,7 @@ It's an integration test framework that focuses its attention to the parametriza
 ### Using pip
 
 ```bash
-pip install rift
+pip install rift-testing
 ```
 
 ## Usage
