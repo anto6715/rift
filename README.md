@@ -14,10 +14,18 @@ It's an integration test framework that focuses its attention to the parametriza
 
 ## Installation
 
+### Using mamba or conda (recommended)
+
+```shell
+mamba create -n riftenvt
+mamba activate riftenv
+mamba install pit-rift
+```
+
 ### Using pip
 
 ```bash
-pip install rift-testing
+pip install pit-rift
 ```
 
 ## Usage
