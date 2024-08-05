@@ -42,7 +42,7 @@ def get_args(raw_args=None) -> argparse.Namespace:
     )
 
     if "-V" in sys.argv or "--version" in sys.argv:
-        print(importlib.metadata.version("rift"))
+        print(importlib.metadata.version("pit-rift"))
         sys.exit(0)
     return parse.parse_args(raw_args)
 
