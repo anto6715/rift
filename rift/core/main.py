@@ -43,8 +43,8 @@ def execute(test_case_config: Path, work_dir: Path, to_initialize: bool):
     environ_to_export = test_case.environ()
     test_path_structure = path_manager.get_test_execution_structure()
 
-    environment.export_dict(environ_to_export)
     environment.export_dict(test_path_structure)
+    environment.export_dict(environ_to_export)
 
     ########################
     # CLONE REPOS
