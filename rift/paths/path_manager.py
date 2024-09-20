@@ -77,9 +77,9 @@ class PathManager(GlobalPathsMixin, ExecutionPathsMixin, TestCasePathsMixin):
             "TEST_DIR": self.implementation_path,
             # paths related to specific test execution
             "SOURCE_DIR": self.get_source_path(),
-            "LOG_DIR": self.get_log_dir(),
-            "WORK_DIR": self.get_work_dir(),
-            "OUT_DIR": self.get_out_dir(),
+            "LOG_DIR": self.log_dir,
+            "WORK_DIR": self.work_dir,
+            "OUT_DIR": self.out_dir,
         }
 
     def get_paths_to_append_to_env_path(self):
