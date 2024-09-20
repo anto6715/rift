@@ -62,7 +62,10 @@ class Scheduler:
                 logger.error(f"Cannot find pid file: {pid_file}")
 
     def get_return_code(self):
-        return self._result.returncode
+        try:
+            return self._result.returncode
+        except AttributeError:
+            return -1
 
 
 def kill_process_with_child(root_pid):
