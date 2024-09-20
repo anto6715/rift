@@ -51,9 +51,9 @@ class Scheduler:
             logger.info("EXECUTION_DONE")
         except KeyboardInterrupt:
             logger.critical("Caught Ctrl + C, starting exit procedure...")
-            pid_file = self.log_dir + "/pid"
+            pid_file = self.log_dir / "pid"
             if os.path.exists(pid_file):  # to kill father process and all kid processes
-                with open(self.log_dir + "/pid") as f:
+                with open(pid_file) as f:
                     pid = f.read().strip("\n")
                     kill_process_with_child(int(pid))
                 logger.info("EXECUTION_DONE")
@@ -62,7 +62,10 @@ class Scheduler:
                 logger.error(f"Cannot find pid file: {pid_file}")
 
     def get_return_code(self):
-        return self._result.returncode
+        try:
+            return self._result.returncode
+        except AttributeError:
+            return -1
 
 
 def kill_process_with_child(root_pid):

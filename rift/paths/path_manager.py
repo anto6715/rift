@@ -60,15 +60,15 @@ class PathManager(GlobalPathsMixin, ExecutionPathsMixin, TestCasePathsMixin):
 
     @property
     def log_dir(self) -> Path:
-        return self.get_log_dir()
+        return self.get_log_dir().absolute()
 
     @property
     def work_dir(self) -> Path:
-        return self.get_work_dir()
+        return self.get_work_dir().absolute()
 
     @property
     def out_dir(self) -> Path:
-        return self.get_out_dir()
+        return self.get_out_dir().absolute()
 
     def get_test_execution_structure(self) -> Dict[str, Path]:
         return {

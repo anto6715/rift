@@ -50,7 +50,8 @@ def execute(test_case_config: Path, work_dir: Path, to_initialize: bool):
     # CLONE REPOS
     ########################
     for repo in test_case.repositories:
-        source.clone(repo.url, repo.branch, dst=path_manager.external_repos_base_path)
+        dst = environment.evaluate_str_with_bash(repo.dst.as_posix())
+        source.clone(repo.url, repo.branch, dst=Path(dst))
 
     ########################
     # EXECUTION

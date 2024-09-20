@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pit-rift"
-version = "0.1.4"
+version = "0.1.5"
 description = "Parametrized Integration Testing framework Tool"
 authors = ["Antonio Mariani <antonio.mariani@cmcc.it>"]
 readme = ["README.md", "doc/README_test_case.md"]
